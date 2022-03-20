@@ -38,8 +38,11 @@ The following three models overall showed broader diversity. Logistic Regression
 ![Index](Images/Slide22.jpg)
 
 
-The Random Forest Model feature importance output was as follows:
+Random Forest Model feature importance output.
+
 ![Index](Images/FI.png)
+
+
 A Voting Classifier ensemble method was then created comprised of Logistic Regression, Random Forest, and SVC models with weights 1, 2, and 2, respectively. This model had the best combined F1 scores compared to the others.
 ![Index](Images/Model2.png)
 
