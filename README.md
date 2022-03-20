@@ -19,40 +19,40 @@ ___
 ## Data Preparation
 
 The previous fiscal years annual balance sheets, cash flows, and income statements for 306 companies were obtained, cleaned, and merged.
-![Index](Images/Data.PNG)
+![Index](Images/Data.png)
 
  <br>
 
 Using Yahoo Finance API, this data was joined with SPY index returns over a period of 90 days prior to the public offering, assuming that the overall market trend may be a key predicting factor. The API was also used to retrieve the returns on the companies stock price.
-![Index](Images/Data2.PNG)
+![Index](Images/Data2.png)
 
 ---
 ---
 ## Results
 
 The first three predictive models used were XGBoost, PyTorch NN, and ADABoost. In essence, these models showed similar traits in precision & recall for predicting both positive and negative returns. The F1 score for negative returns was noticeably more accurate than positive.
-![Index](Images/Models1.PNG)
+![Index](Images/Models1.png)
 <br>
 
 The following three models overall showed broader diversity. Logistic Regression and SVC models were overall more aggressive at predicting buys, while Random Forest was our most conservative model.
-![Index](Images/Slide22.JPG)
+![Index](Images/Slide22.jpg)
 
 
 The Random Forest Model feature importance output was as follows:
-![Index](Images/FI.PNG)
+![Index](Images/FI.png)
 A Voting Classifier ensemble method was then created comprised of Logistic Regression, Random Forest, and SVC models with weights 1, 2, and 2, respectively. This model had the best combined F1 scores compared to the others.
-![Index](Images/Model2.PNG)
+![Index](Images/Model2.png)
 
 ---
 ---
 ## Conclusion
 
 This chart shows realized p&l for the strategy given wich predictive model was used for the buy signal. The Voting Classifier (black) is shown to have performed better than all other models, including a scenario in which one bought all IPOs in our list and sold them 100 days later.
-![Index](Images/Chart1.PNG)
+![Index](Images/Chart1.png)
 
 
 This chart compares the baseline of going in on all of the IPOs, the performance of our strategy, and a similar DCA strategy just using shares of SPY. Though our model was demonstrably profitable, given the nature of the market at the time it is show that buying and selling SPY shares would have been more so.
-![Index](Images/Chart2.PNG)
+![Index](Images/Chart2.png)
 
 
 
